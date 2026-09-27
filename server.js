@@ -4,7 +4,7 @@ const express = require("express");
 
 const app = express();
 
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 const TIMEZONE = "Africa/Dar_es_Salaam";
 
 // ========================================
@@ -311,12 +311,13 @@ app.get("/api/matches", async function (req, res) {
 // START SERVER
 // ========================================
 
+
 app.listen(
     PORT,
     function () {
 
         console.log(
-            "Sports Hub server running at http://localhost:" +
+            "Sports Hub server running on port " +
             PORT
         );
 
