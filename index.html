@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sports Hub</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- NAVIGATION -->
+    <header class="navbar">
+        <div class="logo">
+            Sports<span>Hub</span>
+        </div>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#football">Football</a>
+            <a href="#rugby">Rugby</a>
+            <a href="#tennis">Tennis</a>
+        </nav>
+    </header>
+
+
+    <!-- HERO SECTION -->
+    <section id="home" class="hero">
+
+        <div class="hero-content">
+
+            <h1>WELCOME TO SPORTS HUB</h1>
+
+            <p>
+                Your place for football, rugby, tennis and the latest sports action.
+            </p>
+
+            <a href="#sports" class="hero-button">
+                Explore Sports
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- SPORTS SECTION -->
+    <section id="sports" class="sports-section">
+
+        <div class="section-title">
+            <h2>Explore Sports</h2>
+
+            <p>
+                Choose your favorite sport
+            </p>
+        </div>
+
+
+        <div class="sports-container">
+
+            <!-- FOOTBALL -->
+            <div class="sport-card" id="football">
+
+                <img src="images/football.jpeg" alt="Football">
+
+                <div class="card-content">
+
+                    <h3>Football</h3>
+
+                    <p>
+                        Follow football news, matches and exciting moments.
+                    </p>
+
+                       <button onclick="openNews()">
+                           Read More
+                       </button>
+                        
+                </div>
+
+            </div>
+
+
+            <!-- RUGBY -->
+            <div class="sport-card" id="rugby">
+
+                <img src="images/rugby.jpeg" alt="Rugby">
+
+                <div class="card-content">
+
+                    <h3>Rugby</h3>
+
+                    <p>
+                        Discover rugby matches, teams and exciting action.
+                    </p>
+
+                    <button onclick="openNews()">
+                        Read More
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- TENNIS -->
+            <div class="sport-card" id="tennis">
+
+                <img src="images/tennis.jpeg" alt="Tennis">
+
+                <div class="card-content">
+
+                    <h3>Tennis</h3>
+
+                    <p>
+                        Stay connected with tennis matches and tournaments.
+                    </p>
+
+                    <button onclick="openNews()">
+                        Read More
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+<!-- SPORTS NEWS -->
+
+<section class="news-section" id="news">
+
+    <div class="section-title">
+
+        <h2>Latest Sports News</h2>
+
+        <p>
+            Stay updated with the latest sports stories
+        </p>
+
+    </div>
+
+
+    <div class="news-container">
+
+        <!-- NEWS 1 -->
+
+        <article class="news-card">
+
+            <img
+                src="images/football.jpeg"
+                alt="Football News"
+            >
+
+            <div class="news-content">
+
+                <span class="category football-category">
+                    FOOTBALL
+                </span>
+
+                <h3>
+                    Latest Football News
+                </h3>
+
+                <p>
+                    Get the latest football stories,
+                    match updates and important events.
+                </p>
+
+                <button onclick="readNews('Football')">
+                    Read More
+                </button>
+
+            </div>
+
+        </article>
+
+
+        <!-- NEWS 2 -->
+
+        <article class="news-card">
+
+            <img
+                src="images/rugby.jpeg"
+                alt="Rugby News"
+            >
+
+            <div class="news-content">
+
+                <span class="category rugby-category">
+                    RUGBY
+                </span>
+
+                <h3>
+                    Rugby Updates
+                </h3>
+
+                <p>
+                    Follow rugby matches, teams and
+                    important moments from the sport.
+                </p>
+
+                <button onclick="readNews('Rugby')">
+                    Read More
+                </button>
+
+            </div>
+
+        </article>
+
+
+        <!-- NEWS 3 -->
+
+        <article class="news-card">
+
+            <img
+                src="images/tennis.jpeg"
+                alt="Tennis News"
+            >
+
+            <div class="news-content">
+
+                <span class="category tennis-category">
+                    TENNIS
+                </span>
+
+                <h3>
+                    Tennis Updates
+                </h3>
+
+                <p>
+                    Discover tennis tournaments,
+                    matches and latest developments.
+                </p>
+
+                <button onclick="readNews('Tennis')">
+                    Read More
+                </button>
+
+            </div>
+
+        </article>
+
+    </div>
+
+</section>
+ 
+
+    <!-- ABOUT -->
+    <section class="about-section">
+
+        <div class="about-image">
+            <img src="images/sports.png" alt="Sports">
+        </div>
+
+        <div class="about-content">
+
+            <h2>Sports Hub</h2>
+
+            <p>
+                Welcome to Sports Hub, a modern sports website created
+                for people who love the game.
+            </p>
+
+            <p>
+                Football, rugby and tennis are all brought together
+                in one simple and modern platform.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <p>
+            © 2026 Sports Hub. All Rights Reserved.
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>

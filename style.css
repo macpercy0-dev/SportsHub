@@ -1,0 +1,949 @@
+/* ========================================
+   SPORTS HUB - LIVE SCORES
+======================================== */
+.live-section {
+    padding: 25px 10px 40px;
+    background: #f7f7f7;
+}
+
+.live-header {
+    max-width: 850px;
+    margin: 0 auto 14px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.live-header h2 {
+    margin: 0;
+    font-size: 20px;
+}
+
+.live-now {
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.live-score-list {
+    width: 100%;
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+.score-league {
+    width: 100%;
+    margin: 0 0 18px;
+    background: #fff;
+    border-top: 1px solid #d8d8d8;
+    border-bottom: 1px solid #d8d8d8;
+}
+
+.score-league-header {
+    min-height: 34px;
+    padding: 0 8px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: #f1f1f1;
+
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.league-name {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.league-name img {
+    width: 18px;
+    height: 18px;
+    object-fit: contain;
+}
+
+.league-live {
+    font-size: 10px;
+    font-weight: 800;
+}
+
+.league-line {
+    width: 100%;
+    height: 1px;
+    background: #d0d0d0;
+}
+
+.score-match {
+    display: grid;
+
+    grid-template-columns:
+        20px
+        minmax(0, 1fr)
+        40px
+        42px;
+
+    align-items: center;
+
+    min-height: 50px;
+
+    padding: 4px 8px;
+
+    background: #fff;
+}
+
+.favorite {
+    width: 18px;
+    text-align: left;
+    font-size: 16px;
+    line-height: 1;
+    color: #999;
+}
+
+.score-teams {
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.score-team {
+    height: 19px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 6px;
+
+    font-size: 12px;
+    font-weight: 500;
+
+    white-space: nowrap;
+}
+
+.score-team span {
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.score-team img {
+    width: 18px;
+    height: 18px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+.score-result {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 3px;
+
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.score-time {
+    text-align: right;
+    font-size: 10px;
+    font-weight: 700;
+}
+
+.match-line {
+    width: calc(100% - 28px);
+    height: 1px;
+    margin-left: 28px;
+    background: #eeeeee;
+}
+
+.no-live,
+.live-error {
+    width: 100%;
+    max-width: 850px;
+    margin: 20px auto;
+    padding: 20px;
+
+    text-align: center;
+
+    background: #fff;
+    border: 1px solid #ddd;
+
+    font-size: 13px;
+}
+
+@media (max-width: 600px) {
+
+    .live-section {
+        padding: 18px 5px 30px;
+    }
+
+    .live-header {
+        margin-bottom: 10px;
+    }
+
+    .live-header h2 {
+        font-size: 18px;
+    }
+
+    .score-league {
+        margin-bottom: 14px;
+    }
+
+    .score-league-header {
+        min-height: 31px;
+        padding: 0 7px;
+        font-size: 10px;
+    }
+
+    .score-match {
+        grid-template-columns:
+            18px
+            minmax(0, 1fr)
+            34px
+            38px;
+
+        min-height: 46px;
+        padding: 3px 6px;
+    }
+
+    .favorite {
+        width: 16px;
+        font-size: 15px;
+    }
+
+    .score-team {
+        height: 18px;
+        gap: 5px;
+        font-size: 11px;
+    }
+
+    .score-team img {
+        width: 17px;
+        height: 17px;
+    }
+
+    .score-result {
+        font-size: 12px;
+    }
+
+    .score-time {
+        font-size: 9px;
+    }
+
+    .match-line {
+        width: calc(100% - 24px);
+        margin-left: 24px;
+    }
+}
+
+/* ========================================
+   DATE TABS
+======================================== */
+
+.date-tabs {
+    width: 100%;
+    max-width: 850px;
+    margin: 0 auto 8px;
+
+    display: grid;
+    grid-template-columns:
+        1fr
+        1fr
+        1fr;
+
+    gap: 2px;
+    background: #d8d8d8;
+}
+
+.date-tab {
+    border: 0;
+    padding: 8px 6px;
+    background: #f2f2f2;
+    cursor: pointer;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 2px;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.date-tab small {
+    font-size: 9px;
+    font-weight: 400;
+    color: #777;
+}
+
+.date-tab.active {
+    background: #ffffff;
+    font-weight: 800;
+}
+
+.status-tabs {
+    width: 100%;
+    max-width: 850px;
+    margin: 0 auto 10px;
+
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    overflow-x: auto;
+}
+
+.status-tab {
+    border: 1px solid #ddd;
+    background: #fff;
+
+    padding: 5px 12px;
+    border-radius: 3px;
+
+    cursor: pointer;
+
+    font-size: 10px;
+    font-weight: 600;
+
+    white-space: nowrap;
+}
+
+.status-tab.active {
+    background: #eeeeee;
+    border-color: #bbb;
+    font-weight: 800;
+}
+
+.selected-date-label {
+    width: 100%;
+    max-width: 850px;
+    margin: 0 auto 8px;
+
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.loading-live {
+    width: 100%;
+    padding: 25px 10px;
+
+    text-align: center;
+
+    background: #fff;
+    border: 1px solid #ddd;
+
+    font-size: 12px;
+}
+
+.status-live {
+    font-weight: 800;
+}
+
+.status-finished {
+    font-weight: 700;
+}
+
+.status-upcoming {
+    font-weight: 700;
+}
+
+@media (max-width: 600px) {
+
+    .date-tabs {
+        gap: 1px;
+    }
+
+    .date-tab {
+        padding: 7px 3px;
+        font-size: 10px;
+    }
+
+    .date-tab small {
+        font-size: 8px;
+    }
+
+    .status-tabs {
+        gap: 4px;
+        margin-bottom: 8px;
+    }
+
+    .status-tab {
+        padding: 5px 9px;
+        font-size: 9px;
+    }
+
+    .selected-date-label {
+        font-size: 10px;
+    }
+
+}
+
+
+
+
+/* ========================================
+   LIVE SCORE LIST
+======================================== */
+
+.live-score-list {
+    width: 100%;
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+
+/* ========================================
+   LEAGUE
+======================================== */
+
+.score-league {
+    width: 100%;
+    margin: 0 0 18px;
+
+    background: #fff;
+
+    border-top: 1px solid #d8d8d8;
+    border-bottom: 1px solid #d8d8d8;
+}
+
+
+/* ========================================
+   LEAGUE HEADER
+======================================== */
+
+.score-league-header {
+    min-height: 34px;
+
+    padding: 0 8px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: #f1f1f1;
+
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.league-name {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.league-name img {
+    width: 18px;
+    height: 18px;
+
+    object-fit: contain;
+}
+
+.league-live {
+    font-size: 10px;
+    font-weight: 800;
+}
+
+
+/* ========================================
+   LINE BELOW LEAGUE
+======================================== */
+
+.league-line {
+    width: 100%;
+    height: 1px;
+
+    background: #d0d0d0;
+}
+
+
+/* ========================================
+   MATCH ROW
+======================================== */
+
+.score-match {
+    display: grid;
+
+    /*
+       STAR | TEAMS | SCORE | TIME
+    */
+    grid-template-columns:
+        20px
+        minmax(0, 1fr)
+        40px
+        42px;
+
+    align-items: center;
+
+    min-height: 50px;
+
+    padding: 4px 8px;
+
+    background: #fff;
+}
+
+
+/* ========================================
+   STAR
+======================================== */
+
+.favorite {
+    width: 18px;
+
+    text-align: left;
+
+    font-size: 16px;
+    line-height: 1;
+
+    color: #999;
+}
+
+
+/* ========================================
+   TEAMS
+======================================== */
+
+.score-teams {
+    min-width: 0;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 3px;
+}
+
+.score-team {
+    height: 19px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 6px;
+
+    font-size: 12px;
+    font-weight: 500;
+
+    white-space: nowrap;
+}
+
+.score-team span {
+    min-width: 0;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+}
+
+.score-team img {
+    width: 18px;
+    height: 18px;
+
+    object-fit: contain;
+
+    flex-shrink: 0;
+}
+
+
+/* ========================================
+   SCORE
+======================================== */
+
+.score-result {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 3px;
+
+    font-size: 13px;
+    font-weight: 800;
+}
+
+
+/* ========================================
+   TIME
+======================================== */
+
+.score-time {
+    text-align: right;
+
+    font-size: 10px;
+    font-weight: 700;
+}
+
+
+/* ========================================
+   LINE BETWEEN MATCHES
+======================================== */
+
+.match-line {
+    width: calc(100% - 28px);
+    height: 1px;
+
+    margin-left: 28px;
+
+    background: #eeeeee;
+}
+
+
+/* ========================================
+   NO MATCHES / ERROR
+======================================== */
+
+.no-live,
+.live-error {
+    width: 100%;
+    max-width: 850px;
+
+    margin: 20px auto;
+
+    padding: 20px;
+
+    text-align: center;
+
+    background: #fff;
+
+    border: 1px solid #ddd;
+
+    font-size: 13px;
+}
+
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 600px) {
+
+    .live-section {
+        padding: 18px 5px 30px;
+    }
+
+    .live-header {
+        margin-bottom: 10px;
+    }
+
+    .live-header h2 {
+        font-size: 18px;
+    }
+
+
+    /* League */
+
+    .score-league {
+        margin-bottom: 14px;
+    }
+
+    .score-league-header {
+        min-height: 31px;
+
+        padding: 0 7px;
+
+        font-size: 10px;
+    }
+
+
+    /* Match */
+
+    .score-match {
+        grid-template-columns:
+            18px
+            minmax(0, 1fr)
+            34px
+            38px;
+
+        min-height: 46px;
+
+        padding: 3px 6px;
+    }
+
+
+    /* Star */
+
+    .favorite {
+        width: 16px;
+
+        font-size: 15px;
+    }
+
+
+    /* Teams */
+
+    .score-team {
+        height: 18px;
+
+        gap: 5px;
+
+        font-size: 11px;
+    }
+
+    .score-team img {
+        width: 17px;
+        height: 17px;
+    }
+
+
+    /* Score */
+
+    .score-result {
+        font-size: 12px;
+    }
+
+
+    /* Time */
+
+    .score-time {
+        font-size: 9px;
+    }
+
+
+    /* Match line */
+
+    .match-line {
+        width: calc(100% - 24px);
+
+        margin-left: 24px;
+    }
+}
+
+
+/* ========================================
+   DATE TABS
+======================================== */
+
+.date-tabs {
+    width: 100%;
+    max-width: 850px;
+
+    margin: 0 auto 8px;
+
+    display: grid;
+
+    grid-template-columns:
+        1fr
+        1fr
+        1fr;
+
+    gap: 2px;
+
+    background: #d8d8d8;
+}
+
+
+.date-tab {
+    border: 0;
+
+    padding: 8px 6px;
+
+    background: #f2f2f2;
+
+    cursor: pointer;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 2px;
+
+    font-size: 11px;
+
+    font-weight: 700;
+}
+
+
+.date-tab small {
+    font-size: 9px;
+
+    font-weight: 400;
+
+    color: #777;
+}
+
+
+.date-tab.active {
+    background: #ffffff;
+
+    font-weight: 800;
+}
+
+
+/* ========================================
+   STATUS TABS
+======================================== */
+
+.status-tabs {
+    width: 100%;
+    max-width: 850px;
+
+    margin: 0 auto 10px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 5px;
+
+    overflow-x: auto;
+}
+
+
+.status-tab {
+    border: 1px solid #ddd;
+
+    background: #fff;
+
+    padding: 5px 12px;
+
+    border-radius: 3px;
+
+    cursor: pointer;
+
+    font-size: 10px;
+
+    font-weight: 600;
+
+    white-space: nowrap;
+}
+
+
+.status-tab.active {
+    background: #eeeeee;
+
+    border-color: #bbb;
+
+    font-weight: 800;
+}
+
+
+/* ========================================
+   SELECTED DATE
+======================================== */
+
+.selected-date-label {
+    width: 100%;
+    max-width: 850px;
+
+    margin: 0 auto 8px;
+
+    font-size: 11px;
+
+    font-weight: 700;
+}
+
+
+/* ========================================
+   LOADING
+======================================== */
+
+.loading-live {
+    width: 100%;
+
+    padding: 25px 10px;
+
+    text-align: center;
+
+    background: #fff;
+
+    border: 1px solid #ddd;
+
+    font-size: 12px;
+}
+
+
+/* ========================================
+   MATCH STATUS
+======================================== */
+
+.status-live {
+    font-weight: 800;
+}
+
+.status-finished {
+    font-weight: 700;
+}
+
+.status-upcoming {
+    font-weight: 700;
+}
+
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 600px) {
+
+    .date-tabs {
+        gap: 1px;
+    }
+
+
+    .date-tab {
+        padding: 7px 3px;
+
+        font-size: 10px;
+    }
+
+
+    .date-tab small {
+        font-size: 8px;
+    }
+
+
+    .status-tabs {
+        gap: 4px;
+
+        margin-bottom: 8px;
+    }
+
+
+    .status-tab {
+        padding: 5px 9px;
+
+        font-size: 9px;
+    }
+
+
+    .selected-date-label {
+        font-size: 10px;
+    }
+
+}
+
+/* ========================================
+   LAST UPDATED
+======================================== */
+
+.last-updated {
+    width: 100%;
+    max-width: 850px;
+    margin: 0 auto 10px;
+
+    font-size: 10px;
+    font-weight: 600;
+    color: #777;
+
+    text-align: right;
+}
+
+@media (max-width: 600px) {
+
+    .last-updated {
+        font-size: 9px;
+        margin-bottom: 8px;
+        padding-right: 3px;
+    }
+
+}

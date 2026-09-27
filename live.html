@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Live Scores - Sports Hub
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================
+         NAVBAR
+    ====================================== -->
+
+    <header class="navbar">
+
+        <div class="container">
+
+            <h1>
+                Sports Hub
+            </h1>
+
+
+            <nav>
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="index.html#football">
+                    Football
+                </a>
+
+                <a href="index.html#rugby">
+                    Rugby
+                </a>
+
+                <a href="index.html#tennis">
+                    Tennis
+                </a>
+
+                <a
+                    href="live.html"
+                    class="active"
+                >
+                    Live
+                </a>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =====================================
+         LIVE SCORES
+    ====================================== -->
+
+    <main class="live-section">
+
+        <div class="container">
+
+
+            <!-- =================================
+                 PAGE HEADER
+            ================================== -->
+
+            <div class="live-header">
+
+                <h2>
+                    Football Scores
+                </h2>
+
+
+                <span class="live-now">
+                    ● LIVE
+                </span>
+
+            </div>
+
+
+
+            <!-- =================================
+                 DATE NAVIGATION
+            ================================== -->
+
+            <div class="date-tabs">
+
+                <button
+                    type="button"
+                    class="date-tab"
+                    data-date="yesterday"
+                >
+                    <span>
+                        Yesterday
+                    </span>
+
+                    <small
+                        id="yesterdayDate"
+                    >
+                    </small>
+
+                </button>
+
+
+                <button
+                    type="button"
+                    class="date-tab active"
+                    data-date="today"
+                >
+                    <span>
+                        Today
+                    </span>
+
+                    <small
+                        id="todayDate"
+                    >
+                    </small>
+
+                </button>
+
+
+                <button
+                    type="button"
+                    class="date-tab"
+                    data-date="tomorrow"
+                >
+                    <span>
+                        Tomorrow
+                    </span>
+
+                    <small
+                        id="tomorrowDate"
+                    >
+                    </small>
+
+                </button>
+
+            </div>
+
+
+
+            <!-- =================================
+                 STATUS FILTER
+            ================================== -->
+
+            <div class="status-tabs">
+
+                <button
+                    type="button"
+                    class="status-tab active"
+                    data-filter="all"
+                >
+                    All
+                </button>
+
+
+                <button
+                    type="button"
+                    class="status-tab"
+                    data-filter="live"
+                >
+                    Live
+                </button>
+
+
+                <button
+                    type="button"
+                    class="status-tab"
+                    data-filter="upcoming"
+                >
+                    Upcoming
+                </button>
+
+
+                <button
+                    type="button"
+                    class="status-tab"
+                    data-filter="finished"
+                >
+                    Finished
+                </button>
+
+            </div>
+
+
+
+            <!-- =================================
+                 SELECTED DATE
+            ================================== -->
+
+            <div id="selectedDateLabel" class="selected-date-label">
+    Today's Matches
+</div>
+
+<div id="lastUpdated" class="last-updated">
+    Last updated: --
+</div>
+
+<div id="liveMatches" class="live-score-list"></div>
+                                                                      
+            <!-- =================================
+                 MATCHES
+            ================================== -->
+
+            <div
+                id="liveMatches"
+                class="live-score-list"
+            >
+
+                <div class="loading-live">
+
+                    Inapakia mechi...
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </main>
+
+
+
+    <!-- =====================================
+         FOOTER
+    ====================================== -->
+
+    <footer>
+
+        <div class="container">
+
+            <p>
+                © 2026 Sports Hub.
+                All Rights Reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
